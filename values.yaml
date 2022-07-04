@@ -1,0 +1,15 @@
+apiService:
+  create: true
+
+extraArgs:
+  - --kubelet-preferred-address-types=InternalIP
+
+podDisruptionBudget:
+  minAvailable: "1"
+
+resources:
+  requests: 
+    cpu: 50m
+    memory: 100Mi
+
+priorityClassName: system-cluster-critical
